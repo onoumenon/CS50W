@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>About - Roots Bar</title>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class='page'>
+                    <!-- The Modal -->
+                    <div id="myModal" class="modal">
+                            <span class="close"><h1>&times;</h1></span>
+                            <img class="modal-content" id="img01">
+                            <div id="caption"></div>
+                        </div>
+        <div class='section header' id="myHeader">
+            <div class='block link'><a href="about.html">
+                    <h2>About</h2>
+                </a></div>
+            <div class='block link'><a href="index.html#book">
+                    <h2>Book</h2>
+                </a></div>
+            <div class='block home'><a href="index.html"><img src="images/roots-logo.png"></a></div>
+            <div class='block link'><a href="menu.html">
+                    <h2>Menu</h2>
+                </a></div>
+            <div class='block link'><a href="index.html#contact">
+                    <h2>Contact</h2>
+                </a></div>
+
+
+        </div>
+        <div class='section sign-up menuitem'>
+            <div>
+
+                <img id="menuImg" src="images/menu.png" alt="Roots Menu" style="width:100%;max-width:300px">
+            </div>
+
+
+        </div>
+        <div class='section footer'></div>
+
+        <script>
+                // Get the modal
+                var modal = document.getElementById('myModal');
+                
+                // Get the image and insert it inside the modal - use its "alt" text as a caption
+                var img = document.getElementById('menuImg');
+                var modalImg = document.getElementById("img01");
+                var captionText = document.getElementById("caption");
+                img.onclick = function(){
+                  modal.style.display = "block";
+                  modalImg.src = this.src;
+                  captionText.innerHTML = this.alt;
+                }
+                
+                // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close")[0];
+                
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function() { 
+                  modal.style.display = "none";
+                }
+                </script>
+
+        <div class='section footer push'>
+
+            <div class='social'>
+                <a href="" class='icons'><img src="images/instagram.png"></a>
+                <a href="" class='icons'><img src="images/facebook.png"></a>
+                <a href="https://github.com/onoumenon" class='icons'><img src="images/github.png"></a>
+                <a href="mailto:achiekoaoki@gmail.com" class='icons'><img src="images/email.png"></a>
+            </div>
+            <h6 class='icons copyright'>Copyright © 2019 onoumenon. Photos from Unsplash.</h6>
+            <a href="#myHeader">
+                <p class='rightalign icons'><strong><span class="hide">Back to </span>Top˄</strong></p>
+            </a>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
