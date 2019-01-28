@@ -2,7 +2,7 @@
 A repository of projects and code for [CD50 Web Development Course](https://courses.edx.org/courses/course-v1:HarvardX+CS50W+Web/course/)
 
 ### 1. Git
-- Project
+- [Project 0](https://onoumenon.github.io/CS50W/project0/index.html)
 
 ### 2. HTML, CSS
 - Project
