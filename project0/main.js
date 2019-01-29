@@ -18,3 +18,14 @@ function validateEmail(email) {
     var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,15}(?:\.[a-z]{2})?)$/i;
     return isEmpty(email) || re.test(email);
 }
+
+function myFunction() {
+    var x = document.getElementById("myHeader");
+    if (x.className === "section header") {
+      x.className += " responsive";
+    } 
+    else {
+      x.className = "section header";
+    }
+  }
+

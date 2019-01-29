@@ -18,8 +18,6 @@
 body {
   background-color: rgb(18, 18, 19);
   background-image: url(images/bg.jpg);
-  
- 
 }
 
 .page {
@@ -41,8 +39,8 @@ body {
 
 .words {
   width: 80%;
-  height: 50%;
-
+  height: auto;
+  min-height: 100px;
 }
 
 .block {
@@ -50,14 +48,11 @@ body {
   height: auto;
 }
 
-
-
 .footer {
   height: 80px;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-around;
-
 }
 
 .rightalign{
@@ -80,12 +75,13 @@ body {
   background-size: cover;
   justify-content: space-around;
   padding: 20px;
-  overflow: hidden;
   flex-wrap: nowrap;
+
 }
 
+
 .content {
-  min-height: 680px;
+
   height: auto;
   background-image: url(images/About.jpg);
   background-size: cover;
@@ -99,7 +95,7 @@ img {
   max-width: 100%;
 }
 
-a {
+a, a :active {
   text-decoration: none;
   color: beige;
 }
@@ -301,18 +297,51 @@ input[type="submit"]:hover {
 }
 
 /* Mobile Styles */
-@media only screen and (max-width: 480px) {
-  .header {
-    flex-direction: column;
-    height: 410px;
-  }
-  .block {
-    padding: 15px;
+@media only screen and (max-width: 562px) {
+
+  .header a:not(.active) {display: none;}
+
+
+
+  .header a.icon {
+    float: right;
+    display: block;
+    font-size: 10vw;
   }
   
-  .header > .home {
-    order: -1;
+ 
+  .header .icon, .fa {
+    position: fixed;
+    right: 30px;
+    top: 47px;
+    float: right;
+    z-index: 2;
   }
+
+  .header.responsive {
+    position: fixed;
+    background: rgb(0,0,0,0.6);
+    padding: 9px 0;
+    border-radius: 0 0 25px 25px ;
+    z-index: 2;
+  }
+
+  .header.responsive a:not(.active) {
+    display: flex;
+
+
+  }
+
+  .header.responsive .home {display: none;}
+
+
+
+  .block {
+    padding:  0px 5px;
+  }
+  
+
+
   .footer {
     position: fixed;
     left: 0px;
@@ -330,19 +359,41 @@ input[type="submit"]:hover {
     font-size: 1.5em;
     position: relative;
     top: -30px;
-    left: -30px;
+    left: -16px;
   }
 }
 
 /* Tablet Styles */
-@media only screen and (min-width: 480px) and (max-width: 960px) {
+@media only screen and (min-width: 562px) and (max-width: 960px) {
   .feature {
     width: 50%;
   }
+
+.header {
+  overflow: hidden;
+}
+
+.header .icon {
+  display: none;
+}
+
 }
 
 /* Desktop Styles*/
 @media only screen and (min-width: 961px) {
+  .header {
+    overflow: hidden;
+  }
+
+  .header .icon {
+    display: none;
+  }
+
+  .header link {
+    float: left;
+    display: block;
+  }
+  
   html, body {
     height: 100%;
   }
@@ -361,9 +412,7 @@ input[type="submit"]:hover {
     width: 33.33%;
   }
 
-  .header {
-    height: 250px;
-  }
+
 
   .sign-up {
     height: auto;
@@ -381,3 +430,4 @@ input[type="submit"]:hover {
     bottom: -50px;
   }
 }
+
