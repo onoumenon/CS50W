@@ -9,6 +9,7 @@
   }
 }
 
+
 * {
   margin: 0;
   padding: 0;
@@ -76,12 +77,9 @@ body {
   justify-content: space-around;
   padding: 20px;
   flex-wrap: nowrap;
-
 }
 
-
 .content {
-
   height: auto;
   background-image: url(images/About.jpg);
   background-size: cover;
@@ -112,7 +110,6 @@ a, a :active {
 }
 
 #menuImg:hover {opacity: 0.7;}
-
 
 .overlay {
   position: relative;
@@ -146,7 +143,6 @@ a, a :active {
   text-align: center;
   text-shadow: 2px 2px 8px rgb(18, 18, 19), 2px 2px 25px rgb(18, 18, 19);
 }
-
 
 h1 {
   font-family: "Josefin Sans", sans-serif;
@@ -220,6 +216,7 @@ input[type="submit"]:hover {
   background-color: rgb(134, 75, 36);
 }
 
+
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
@@ -290,18 +287,17 @@ input[type="submit"]:hover {
 }
 
 /* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 700px) {
   .modal-content {
     width: 100%;
   }
 }
 
+
 /* Mobile Styles */
 @media only screen and (max-width: 562px) {
 
   .header a:not(.active) {display: none;}
-
-
 
   .header a.icon {
     float: right;
@@ -309,7 +305,6 @@ input[type="submit"]:hover {
     font-size: 10vw;
   }
   
- 
   .header .icon, .fa {
     position: fixed;
     right: 30px;
@@ -329,25 +324,21 @@ input[type="submit"]:hover {
   .header.responsive a:not(.active) {
     display: flex;
 
-
   }
 
   .header.responsive .home {display: none;}
-
-
 
   .block {
     padding:  0px 5px;
   }
   
-
-
   .footer {
     position: fixed;
     left: 0px;
     bottom: 0px;
     height: 50px;
     width: 100%;
+    z-index: 2;
   }
 
   .social, .copyright, .hide {
@@ -363,21 +354,22 @@ input[type="submit"]:hover {
   }
 }
 
+
 /* Tablet Styles */
 @media only screen and (min-width: 562px) and (max-width: 960px) {
   .feature {
     width: 50%;
   }
 
-.header {
-  overflow: hidden;
+  .header {
+    overflow: hidden;
+  }
+
+  .header .icon {
+    display: none;
+  }
 }
 
-.header .icon {
-  display: none;
-}
-
-}
 
 /* Desktop Styles*/
 @media only screen and (min-width: 961px) {
@@ -385,7 +377,7 @@ input[type="submit"]:hover {
     overflow: hidden;
   }
 
-  .header .icon {
+  .icon {
     display: none;
   }
 
@@ -411,8 +403,6 @@ input[type="submit"]:hover {
   .feature {
     width: 33.33%;
   }
-
-
 
   .sign-up {
     height: auto;
